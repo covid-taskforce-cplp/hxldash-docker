@@ -28,10 +28,13 @@ RUN git clone -b master --single-branch --depth=1 https://github.com/SimonbJohns
 #   && yarn production-build
 
 WORKDIR /usr/src/app/
+COPY settings.py ./quickx3/
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 #COPY --chown=node:node docker-entrypoint.sh /docker-entrypoint.sh
 COPY docker-entrypoint.sh /docker-entrypoint.sh
+
+EXPOSE 8000
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
