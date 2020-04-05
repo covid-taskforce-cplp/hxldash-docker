@@ -50,6 +50,8 @@ docker build --no-cache -t hxldash . && docker run -it --rm --name hxldash-app h
 ### Basic docker commands
 
 ```bash
+
+
 # Stop all containers from this uwazi-docker and do not restart again until you explicit ask for it
 docker-compose stop
 
@@ -65,6 +67,7 @@ docker ps
 # See all docker volumes
 docker volume ls
 
+
 # TODO: add commands specific to hxldash-docker
 
 # # See docker volumes that stores data from uwazi-docker (hint: these ones to backup & restore)
@@ -76,3 +79,24 @@ docker volume ls
 # # Want some GUI to see what is happening on Elastic Search? Try Dejavu
 # docker-compose up -d elasticsearch-gui-dejavu
 ```
+### Commands for debug
+
+```bash
+# To log directly on a running container, in this case the hxldash
+docker-compose exec hxldash bash
+
+# To watch logs of all containers managed by this docker-compose.yml
+docker-compose logs -f
+```
+
+<!--
+
+Maybe:
+- https://hub.docker.com/r/unocha/hxl-proxy
+- https://hub.docker.com/_/traefik
+
+
+Group of services (strategy)
+- https://github.com/docker/compose/issues/2589#issuecomment-313796200
+
+-->

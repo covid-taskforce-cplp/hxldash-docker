@@ -25,7 +25,8 @@ SECRET_KEY = '84tu!8+9%sg)*)bq2mdr6lrr_s(3so0h(lgu4&@nxyaomn(ir9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# TODO: improve security here, see https://docs.docker.com/compose/django/
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

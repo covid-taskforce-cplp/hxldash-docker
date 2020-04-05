@@ -1,13 +1,15 @@
 #!/bin/sh
 
-whoami
+# @see https://docs.docker.com/compose/django/
 
-python --version
+# whoami
 
-pwd
+# python --version
 
-ls -lha /usr/src/app/
+# pwd
+
+# ls -lha /usr/src/app/
 
 python /usr/src/app/manage.py migrate
 
-python /usr/src/app/manage.py runserver
+python /usr/src/app/manage.py runserver 0.0.0.0:8000

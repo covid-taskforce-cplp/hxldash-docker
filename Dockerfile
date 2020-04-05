@@ -38,3 +38,6 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 EXPOSE 8000
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
+# RUN /docker-entrypoint.sh
+
+# CMD [ "python", "./manage.py", "runserver", "0.0.0.0:8000" ]
