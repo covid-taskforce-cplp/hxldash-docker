@@ -101,6 +101,22 @@ Group of services (strategy)
 
 -->
 
+## Docker image
+
+### To use pre-build docker images
+
+See <https://hub.docker.com/r/covidtaskforcecplp/hxldash>.
+
+### Upload image do Docker Hub
+
+If you have access to the organization <https://hub.docker.com/u/covidtaskforcecplp>, you can build locally and publish with this command:
+
+
+```bash
+docker build -t covidtaskforcecplp/hxldash .
+docker push covidtaskforcecplp/hxldash
+```
+
 ## License
 
 [![Public Domain](https://i.creativecommons.org/p/zero/1.0/88x31.png)](UNLICENSE)
