@@ -20,8 +20,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
 #   && yarn install \
 #   && yarn production-build
 
-RUN git clone -b master --single-branch --depth=1 https://github.com/SimonbJohnson/quickX3.git /usr/src/app/
-# RUN git clone -b master --single-branch --depth=1 https://github.com/SimonbJohnson/quickX3.git /usr/src/app/ \
+# RUN git clone -b master --single-branch --depth=1 https://github.com/SimonbJohnson/quickX3.git /usr/src/app/
+RUN git clone -b adding-populate-database-command --single-branch --depth=1 https://github.com/SimonbJohnson/quickX3.git /usr/src/app/
+# RUN git clone -b adding-populate-database-command --single-branch --depth=1 https://github.com/SimonbJohnson/quickX3.git /usr/src/app/ \
 #   && chown node:node -R /home/node/uwazi/ \
 #   && cd /home/node/uwazi/ \
 #   && yarn install \
